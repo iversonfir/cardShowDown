@@ -9,14 +9,11 @@ public class Deck {
 //先創造出所有的卡片，放入liist 之後就可以隨機抽取
 
 
-
     public static List<Card> getCards() {
-        if(cards==null){
-            cards=new ArrayList<>();
-            for (Card.Suit suit : Card.Suit.values()) {
-                for (Card.Rank rank : Card.Rank.values()) {
-                    cards.add(new Card(suit,rank));
-                }
+        cards=new ArrayList<>();
+        for (Card.Suit suit : Card.Suit.values()) {
+            for (Card.Rank rank : Card.Rank.values()) {
+                cards.add(new Card(suit,rank));
             }
         }
         return cards;
@@ -27,6 +24,7 @@ public class Deck {
     }
 
     public static void shuffle(){
+
         System.out.println("【洗牌】");
     }
 
